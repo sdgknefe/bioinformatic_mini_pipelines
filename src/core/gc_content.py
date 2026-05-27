@@ -1,6 +1,18 @@
-'''
+"""
+GC Content Module
+-----------------
 
-'''
+Calculates GC content of a DNA sequence.
+
+Formula:
+    GC% = (G + C) / length(sequence) * 100
+
+Input:
+    DNA sequence (string)
+
+Output:
+    float (percentage)
+"""
 
 def gc_content(dna):
 
