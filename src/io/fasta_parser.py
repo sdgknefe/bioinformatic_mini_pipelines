@@ -1,6 +1,13 @@
-'''
-    : FASTA PARSER :
-'''
+"""
+FASTA Parser Module
+--------------------
+
+Part of bioinformatics-mini-pipelines project.
+
+Parses multi-FASTA files into a dictionary.
+
+Author: Doğukan EFE
+"""
 def fasta_parser(path_file: str) -> dict:
 
     data = {}
