@@ -1,90 +1,47 @@
-# bioinformatic_mini_pipelines
-A Python-based toolkit for DNA sequence analysis and bioinformatics learning projects.
-🧬 Bioinformatics Mini Pipeline
+Bioinformatics Mini Pipeline
 
-A lightweight Python project for DNA sequence analysis using a modular bioinformatics workflow.
+A modular Python pipeline for basic DNA sequence analysis using real FASTA data from NCBI.
 
-It processes FASTA files and computes GC content using a clean IO → CORE → PIPELINE architecture.
+Project Goal
 
+To build a simple bioinformatics pipeline that processes real genomic FASTA files and performs basic DNA sequence analysis using a modular Python structure.
 
-🚀 WHAT THIS PROJECT DOES
+Data source: National Center for Biotechnology Information (NCBI)
 
-- Reads and parses FASTA files (single and multi-sequence support)
-- Extracts DNA sequences
-- Computes GC content for each sequence
-- Returns results as a structured dictionary
+Features
 
+- FASTA file parsing (multi-sequence support)
+- Nucleotide counting (A, T, G, C)
+- GC content calculation
+- Reverse complement generation
+- Modular pipeline architecture
 
-🧠 ARCHITECTURE
+How to Run
 
-FASTA FILE
-   ↓
-IO Layer (FASTA Parser)
-   ↓
-CORE Layer (GC Content Calculation)
-   ↓
-PIPELINE (Workflow Orchestration)
-   ↓
-RESULTS OUTPUT
+python main.py data/mecA.fasta
 
+Pipeline Flow
 
-📁 PROJECT STRUCTURE
+FASTA file
+→ Parser (IO layer)
+→ Core analysis
+→ Output results
 
-bioinformatics_mini_pipelines/
-│
-├── data/               # Example FASTA files
-├── src/
-│   ├── io/
-│   │   └── fasta_parser.py
-│   ├── core/
-│   │   └── gc_content.py
-│   └── pipeline.py
-└── README.txt
+Project Structure
 
+src/
+  core/
+  io/
+  pipeline.py
 
-▶️ HOW TO RUN
+main.py
+data/
+tests/
 
-from src.pipeline import run_pipeline
+Use Case
 
-results = run_pipeline("data/sample.fasta")
-print(results)
+Analysis of bacterial antibiotic resistance genes (e.g. mecA) related to MRSA.
 
+Author
 
-📊 EXAMPLE OUTPUT
-
-{
-    "seq1": 52.3,
-    "seq2": 48.1
-}
-
-
-🎯 PURPOSE
-
-This project was built to practice and demonstrate:
-
-- Bioinformatics data processing fundamentals
-- Modular Python project architecture
-- FASTA parsing and sequence handling
-- Basic genomic analysis (GC content)
-- Pipeline-based thinking (IO → CORE → PIPELINE)
-
-
-🧠 TECH STACK
-
-- Python 3.x
-- Standard library only
-- No external dependencies
-
-
-📌 FUTURE IMPROVEMENTS
-
-- CLI tool support (argparse)
-- Reverse complement analysis
-- Base composition statistics (A/T/G/C)
-- JSON / CSV output formats
-- Performance optimization for large datasets
-
-
-🧬 PHILOSOPHY
-
-“Understand the pipeline, not just the function.”
+Doğukan EFE

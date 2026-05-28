@@ -1,4 +1,8 @@
+"""
+    Returns the reverse complement of a DNA sequence.
 
+    Unknown bases are converted to 'N'.
+"""
 def reverse_complement(dna: str) ->str:
     
     complement = {

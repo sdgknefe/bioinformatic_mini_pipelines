@@ -31,7 +31,7 @@ def fasta_parser(path_file: str) -> dict:
                 sequence = ""
 
             else:
-                sequence += line
+                sequence += line.upper()
 
         if header is not None:
             data[header] = sequence
