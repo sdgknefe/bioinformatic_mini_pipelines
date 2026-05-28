@@ -5,15 +5,15 @@
     - reverse complement
 """
 
-from io.fasta_parser import parse_fasta
-from core.gc_content import gc_content
-from core.base_count import base_stats
-from core.reverse_complement import reverse_complement
+from src.io_layer.fasta_parser import fasta_parser
+from src.core.gc_content import gc_content
+from src.core.base_stats import base_stats
+from src.core.reverse_complement import reverse_complement
 
 
 def run_pipeline(file_path: str) -> dict:
 
-    data = parse_fasta(file_path)
+    data = fasta_parser(file_path)
 
     results = {}
 
